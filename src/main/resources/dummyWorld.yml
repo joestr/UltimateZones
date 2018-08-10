@@ -1,0 +1,45 @@
+# UltimateZones World Configuration
+# Hint: Using -1 in any option inside this file let the Plugin ignore the restriction
+# To allow creation the players needs also the correct permission to add zones inside of this world
+# For further informations read the Github Page over World Configuration
+
+# Allows to completly deactivate zones per world. All existing Zones in this world will be ignored
+# until this is set to true. No new Zones can be created
+# To deactivate the creation of Zones only for certain Users/Groups use the Permissions
+# Warning: This pretends the plugin from load/init existing zones. They still exist in the database
+activate-zones: true
+
+# The following options define the maximum sizes of zones for players without the ignorerestrictions permission
+# 'sts-multiplier' defines the maximum difference between two sides (disallows zones with sizes like 2 x 150)
+# Hint: This Settings only counts for Main Zones!
+restrictions:
+    geometry:
+        cuboid:
+            min-width: 20
+            max-width: 150
+            min-height: 1
+            max-height: -1
+            sts-multiplier: 3
+        cylinder:
+            min-radius: 10
+            max-radius: 80
+            min-height: 1
+            max-height: -1
+        sphere:
+            min-radius: 10
+            max-radius: 80
+        polygon:
+            max-dots: 150
+            min-height: 1
+            max-height: -1
+    main:
+        max-area: 25000
+        max-volume: -1
+
+# The next three Options define the maximum number of Zones
+# First the maximum number of Main-Zones per Player
+# Second the maximum number of Child Zones (recursive)  inside an Main Zone
+# Third the maximum depth of zones (MainZone -> SubZone -> SubZone -> ...), not the Y Axix Height
+max-zones: 3
+max-children-zone: 15
+max-zone-depth: 5

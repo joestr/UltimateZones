@@ -1,0 +1,71 @@
+# UltimateZones Configuration File v1
+
+# Should the Plugin display Zones with particles while creating ?
+visual-creation: true
+
+# With this option it is possible to define the Item used to create and modify zones, use minecraft:air to allow all items (or the hand)
+# Please specify the Mojang Item. ex.: minecraft:wooden_sword
+zone-item: minecraft:wooden_sword
+
+# With this item it is possible to define the item to search for zones, use minecraft:air to allow all items (or the hand)
+# Please specify the Mojang Item. ex.: minecraft:wooden_sword
+find-item: minecraft:wooden_sword
+
+# This Setting controls the overlapping of zones. The Plugin gives each newly created Main Zone an priority
+# Zones with higher priority are peferred when checking the permissions of players 
+# Zones with different priorities can be created OVER other Zones
+# Example 1.: An Player creates a single zone (priority 1) over the street zone (priority 2) on both sides. The Player can build on all positions besides the area of the street zone
+# Example 2.: The Server protects an big area with a zone (priority 0). No player can build/destroy the area until a player creates an zone (priority 1). Now the zone has the higher priority and controls the permissions to build/destroy
+# To fully disable the overlapping of zones set 'deactivate-overlapping' to true. The zone-priority Setting has no longer any effect. Overlapping is furthermore possible with the ignorerestrictions permission 
+zone-priority: 1
+deactivate-overlapping: false
+
+# For the Flag DenySetHome it is possible to define the restricted commands (only lower cased)
+sethome-commands: [sethome]
+
+# When the server can't lookup the player locale this language will be used
+# Available Languages can be found inside the plugins/UltimateZones/locales Folder
+fallback-locale: en_US
+# Forces the Server to use the given Locale, use - to ignore this
+force-locale: null
+# Tries to detect the language set in the Player Client
+detect-locale: true
+
+# Should the plugin automatically search for new updates?
+check-for-updates: true
+# Automatically downloads updates to the updates folder of the server. The server owner only needs to restart the server
+download-updates: false
+
+# This allows to format the outputs of the DateTime
+date-layouts:
+  de_DE: E.', den' dd.MM.yy 'um' HH:mm:ss
+  en_US: L dd, yyyy hh:mm:ss a
+
+# Splits the single Command /uzone to four commands: /find, /zone, /rights and /preset (/uzone always available)
+split-commands: false
+
+# Stops creepers or skeletons from destroying hanging items like item frames or pictures/images (global)
+deactivate-hanging-damage-by-mobs: false
+
+# Dynmap Configuration for displaying Zones
+dm-locale: en_US
+dm-ignored-worlds: [world_nether, world_the_end]
+
+dm-activate-main-set: true
+dm-activate-child-set: true
+dm-activate-server-set: false
+dm-server-set-players: [Server]
+
+dm-main-weight: 1
+dm-main-lineopacity: 0.8
+dm-main-fillopacity: 0.2
+dm-main-linecolor: 0x8B1A1A
+dm-main-fillcolor: 0xFF3030
+
+dm-child-weight: 1
+dm-child-lineopacity: 0.8
+dm-child-fillopacity: 0.2
+dm-child-linecolor: 0xCD3700
+dm-child-fillcolor: 0xEE4000
+
+

@@ -1,0 +1,13 @@
+main: net.dertod2.UltimateZones.Binary.UltimateZones
+
+name: UltimateZones
+version: 0.1.1
+author: DerTod2
+website: http://dertod2.net/
+depend: [DatabaseHandler, ZonesLib]
+softdepend: [dynmap]
+
+commands:
+  'uzone':
+    aliases: ['uz']
+    usage: /<command>

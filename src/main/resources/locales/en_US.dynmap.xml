@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+
+<locale>
+	<name>English</name>
+	<tag>en_US</tag>
+	<java>en-US</java>
+	<colors>false</colors>
+	<module>dynmap</module>
+	<version>1</version>
+	<override>false</override>
+	
+	<phrases>
+		<category key="markersets">
+			<entry key="mainzones"><![CDATA[Mainzones]]></entry>
+			<entry key="childzones"><![CDATA[Subzones]]></entry>
+			<entry key="serverzones"><![CDATA[Serverzones]]></entry>
+		</category>
+		<category key="descriptions">
+			<entry key="fullheightzone"><![CDATA[2D Zone]]></entry>
+
+			<category key="html">
+				<entry key="cuboid">
+				<![CDATA[
+				<div class="infowindow">
+				<center><img src="https://minotar.net/avatar/%owner%/50" alt="%owner%"></center><br />
+				<center><b>%owner%</b>'s Zone</center><br /><br />
+								
+				Id: <b>%id%</b><br />
+				Synonym: <b>%synonym%</b><br />
+				Created: <b>%created%</b><br /><br />
+								
+				Type: <b>Cuboid</b><br />
+				Area: <b></b>%area%<br /><br />
+				Length: <b>%length%</b><br />
+				Width: <b>%width%</b><br />
+				Height: <b>%height%</b>
+				</div>
+				]]>
+				</entry>
+				<entry key="cylinder">
+				<![CDATA[
+				<div class="infowindow">
+				<center><img src="https://minotar.net/avatar/%owner%/50" alt="%owner%"></center><br />
+				<center><b>%owner%</b>'s Zone</center><br /><br />
+								
+				Id: <b>%id%</b><br />
+				Synonym: <b>%synonym%</b><br />
+				Created: <b>%created%</b><br /><br />
+								
+				Type: <b>Zylinder</b><br />
+				Area: <b>%area%</b><br /><br />
+								
+				Radius: <b>%radius%</b><br />
+				Height: <b>%height%</b>
+				</div>
+				]]>
+				</entry>
+				<entry key="sphere">
+				<![CDATA[
+				<div class="infowindow">
+				<center><img src="https://minotar.net/avatar/%owner%/50" alt="%owner%"></center><br />
+				<center><b>%owner%</b>'s Zone</center><br /><br />
+								
+				Id: <b>%id%</b><br />
+				Synonym: <b>%synonym%</b><br />	
+				Created: <b>%created%</b><br /><br />
+							
+				Type: <b>Kugel</b><br />
+				Area: <b>%area%</b><br /><br />
+								
+				Radius: <b>%radius%</b>
+				</div>
+				]]>
+				</entry>
+				<entry key="polygon">
+				<![CDATA[
+				<div class="infowindow">
+				<center><img src="https://minotar.net/avatar/%owner%/50" alt="%owner%"></center><br />
+				<center><b>%owner%</b>'s Zone</center><br /><br />
+								
+				Id: <b>%id%</b><br />
+				Synonym: <b>%synonym%</b><br />		
+				Created: <b>%created%</b><br /><br />
+								
+				Type: <b>Polygon</b><br />
+				Area: <b>%area%</b><br /><br />
+								
+				Dots: <b>%points%</b>
+				</div>
+				]]>
+				</entry>
+			</category>
+		</category>
+	</phrases>
+</locale>

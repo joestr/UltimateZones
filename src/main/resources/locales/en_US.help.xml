@@ -1,0 +1,249 @@
+<?xml version="1.0"?>
+
+<locale>
+	<name>English</name>
+	<tag>en_US</tag>
+	<java>en-US</java>
+	<colors>false</colors>
+	<module>plain</module>
+	<version>2</version>
+	<override>false</override>
+	
+	<phrases>
+		<category key="help.commands">
+			<category key="preset">
+				<entry key="apply"><![CDATA[apply <Preset> <Player> [<Zone>]]]></entry>
+				<entry key="create"><![CDATA[create <Preset> [<Player>] [<Zone>]]]></entry>
+				<entry key="delete"><![CDATA[delete <Preset>]]></entry>
+				<entry key="list"><![CDATA[list [<Preset>]]]></entry>
+				<entry key="edit.name"><![CDATA[edit name <Old> <New>]]></entry>
+				<entry key="edit.flag"><![CDATA[edit flag <Preset> <Flag>]]></entry>
+				<entry key="edit.description"><![CDATA[edit description <Preset> <Description>]]></entry>
+				<entry key="edit.material"><![CDATA[edit [place/break] <Preset> <Material>]]></entry>
+				
+				<category key="apply.descriptions">
+					<entry key="main"><![CDATA[Gives an player all rights of the preset on a zone]]></entry>
+					<entry key="1"><![CDATA[]]></entry>
+					<entry key="2"><![CDATA[The name of the preset]]></entry>
+					<entry key="3"><![CDATA[The name of the player]]></entry>
+					<entry key="4"><![CDATA[The synonym or id of the zone]]></entry>
+				</category>
+				
+				<category key="create.descriptions">
+					<entry key="main"><![CDATA[Creates a new preset]]></entry>
+					<entry key="1"><![CDATA[]]></entry>
+					<entry key="2"><![CDATA[The name of the preset]]></entry>
+					<entry key="3"><![CDATA[The name of the player]]></entry>
+					<entry key="4"><![CDATA[The synonym or id of the zone]]></entry>
+				</category>
+				
+				<category key="delete.descriptions">
+					<entry key="main"><![CDATA[Deletes a preset]]></entry>
+					<entry key="1"><![CDATA[]]></entry>
+					<entry key="2"><![CDATA[The name of the preset]]></entry>
+				</category>
+				
+				<category key="list.descriptions">
+					<entry key="main"><![CDATA[Lists preset informations]]></entry>
+					<entry key="1"><![CDATA[]]></entry>
+					<entry key="2"><![CDATA[The name of the preset]]></entry>
+				</category>
+				
+				<category key="edit.name.descriptions">
+					<entry key="main"><![CDATA[Allows to change the name of a existing preset]]></entry>
+					<entry key="1"><![CDATA[]]></entry>
+					<entry key="2"><![CDATA[]]></entry>
+					<entry key="3"><![CDATA[The name of the preset]]></entry>
+					<entry key="4"><![CDATA[The new name]]></entry>
+				</category>
+				
+				<category key="edit.flag.descriptions">
+					<entry key="main"><![CDATA[Allows to add or remove flags to a preset]]></entry>
+					<entry key="1"><![CDATA[]]></entry>
+					<entry key="2"><![CDATA[]]></entry>
+					<entry key="3"><![CDATA[The name of the preset]]></entry>
+					<entry key="4"><![CDATA[The name of the flag]]></entry>
+				</category>
+				
+				<category key="edit.description.descriptions">
+					<entry key="main"><![CDATA[Allows to change the description of a preset]]></entry>
+					<entry key="1"><![CDATA[]]></entry>
+					<entry key="2"><![CDATA[]]></entry>
+					<entry key="3"><![CDATA[The name of the preset]]></entry>
+					<entry key="4"><![CDATA[The new description]]></entry>
+				</category>
+				
+				<category key="edit.material.descriptions">
+					<entry key="main"><![CDATA[Allows to modify the place or break list of a preset]]></entry>
+					<entry key="1"><![CDATA[]]></entry>
+					<entry key="2"><![CDATA[The name of the list, place or break]]></entry>
+					<entry key="3"><![CDATA[The name of the preset]]></entry>
+					<entry key="4"><![CDATA[The id, bukkit name or mojang identifier]]></entry>
+				</category>
+			</category>
+		
+			<category key="zone">
+				<entry key="add.main"><![CDATA[add main [<Shape>] [<3D/2D>] [<Priority>]]]></entry>
+				<entry key="add.child"><![CDATA[add <Independent/Extended> [<Shape>] [<3D/2D>]]]></entry>
+				<entry key="info"><![CDATA[info [<Zone>]]]></entry>
+				<entry key="list"><![CDATA[list [<Player>]]]></entry>
+				<entry key="delete"><![CDATA[delete [<Zone>]]]></entry>
+				<entry key="edit"><![CDATA[edit <name/priority/owner> <Value> [<Zone>]]]></entry>
+				<entry key="display"><![CDATA[display [<Zone>]]]></entry>
+				
+				<category key="add.main.descriptions">
+					<entry key="main"><![CDATA[Allows to create mainzones]]></entry>
+					<entry key="1"><![CDATA[]]></entry>
+					<entry key="2"><![CDATA[]]></entry>
+					<entry key="3"><![CDATA[The shape of the zone:\nCuboid\nCylinder\nSphere\nPolygon]]></entry>
+					<entry key="4"><![CDATA[Should the zone created as an 3D (with height) or 2D (full height) zone?]]></entry>
+					<entry key="5"><![CDATA[The priority of the zone for collisions and right checks]]></entry>
+				</category>
+				
+				<category key="add.child.descriptions">
+					<entry key="main"><![CDATA[Allows to create subzones]]></entry>
+					<entry key="1"><![CDATA[]]></entry>
+					<entry key="2"><![CDATA[The type of the zone, independent or extended]]></entry>
+					<entry key="3"><![CDATA[The shape of the zone:\nCuboid\nCylinder\nSphere\nPolygon]]></entry>
+					<entry key="4"><![CDATA[Should the zone created as an 3D (with height) or 2D (full height) zone?]]></entry>
+				</category>
+				
+				<category key="info.descriptions">
+					<entry key="main"><![CDATA[Shows informations of a zone]]></entry>
+					<entry key="1"><![CDATA[]]></entry>
+					<entry key="2"><![CDATA[The synonym or id of the zone]]></entry>
+				</category>
+				
+				<category key="list.descriptions">
+					<entry key="main"><![CDATA[Lists all mainzones of an player]]></entry>
+					<entry key="1"><![CDATA[]]></entry>
+					<entry key="2"><![CDATA[The name of the player]]></entry>
+				</category>
+				
+				<category key="delete.descriptions">
+					<entry key="main"><![CDATA[Deletes a zone with all containing subzones]]></entry>
+					<entry key="1"><![CDATA[]]></entry>
+					<entry key="2"><![CDATA[The synonym or id of the zone]]></entry>
+				</category>
+				
+				<category key="edit.descriptions">
+					<entry key="main"><![CDATA[Allows to modify different settings of a zone]]></entry>
+					<entry key="1"><![CDATA[]]></entry>
+					<entry key="2"><![CDATA[What should be edited]]></entry>
+					<entry key="3"><![CDATA[The new value of the setting]]></entry>
+					<entry key="4"><![CDATA[The synonym or id of the zone]]></entry>
+				</category>
+				
+				<category key="display.descriptions">
+					<entry key="main"><![CDATA[Allows to display a zone visually over particles]]></entry>
+					<entry key="1"><![CDATA[]]></entry>
+					<entry key="2"><![CDATA[The synonym or id of the zone]]></entry>
+				</category>
+			</category>
+
+			<category key="rights">
+				<entry key="edit.flag"><![CDATA[edit flag <Flag> <Player> [<Zone>]]]></entry>
+				<entry key="edit.material"><![CDATA[edit place/break <Block> <Player> [<Zone>]]]></entry>
+				<entry key="copy.zone"><![CDATA[copy zone <Zone 1> <Zone 2> [<Player>]]]></entry>
+				<entry key="copy.player"><![CDATA[copy player <Player 1> <Player 2> [<Zone>]]]></entry>
+				<entry key="list"><![CDATA[list [<Zone>] [<Player>]]]></entry>
+				<entry key="clear"><![CDATA[clear [<Zone>] [<Player>]]]></entry>
+				<entry key="flags"><![CDATA[flags]]></entry>
+				
+				<category key="edit.flag.descriptions">
+					<entry key="main"><![CDATA[Gives or takes an player a flag]]></entry>
+					<entry key="1"><![CDATA[]]></entry>
+					<entry key="2"><![CDATA[]]></entry>
+					<entry key="3"><![CDATA[The flag to control]]></entry>
+					<entry key="4"><![CDATA[The name of the player]]></entry>
+					<entry key="5"><![CDATA[The synonym or id of the zone]]></entry>
+				</category>
+				
+				<category key="edit.material.descriptions">
+					<entry key="main"><![CDATA[Gives or takes an player the right for an block]]></entry>
+					<entry key="1"><![CDATA[]]></entry>
+					<entry key="2"><![CDATA[Which list (place or break) should be altered?]]></entry>
+					<entry key="3"><![CDATA[The id, bukkit name or mojang identifier]]></entry>
+					<entry key="4"><![CDATA[The name of the player]]></entry>
+					<entry key="5"><![CDATA[The synonym or id of the zone]]></entry>
+				</category>
+				
+				<category key="copy.zone.descriptions">
+					<entry key="main"><![CDATA[Copies all rights of one zone to another or of one player]]></entry>
+					<entry key="1"><![CDATA[]]></entry>
+					<entry key="2"><![CDATA[]]></entry>
+					<entry key="3"><![CDATA[The synonym or id of the source zone]]></entry>
+					<entry key="4"><![CDATA[The synonym or id of the target zone]]></entry>
+					<entry key="5"><![CDATA[The name of the player]]></entry>
+				</category>
+				
+				<category key="copy.player.descriptions">
+					<entry key="main"><![CDATA[Copies the right of one player to another]]></entry>
+					<entry key="1"><![CDATA[]]></entry>
+					<entry key="2"><![CDATA[]]></entry>
+					<entry key="3"><![CDATA[The name of the source player]]></entry>
+					<entry key="4"><![CDATA[The name of the target player]]></entry>
+					<entry key="5"><![CDATA[The synonym or id of the zone]]></entry>
+				</category>
+				
+				<category key="list.descriptions">
+					<entry key="main"><![CDATA[Lists all players with rights or detailed rights of an player]]></entry>
+					<entry key="1"><![CDATA[]]></entry>
+					<entry key="2"><![CDATA[The synonym or id of the zone]]></entry>
+					<entry key="3"><![CDATA[The name of the player]]></entry>
+				</category>
+				
+				<category key="clear.descriptions">
+					<entry key="main"><![CDATA[Removes all rights of all players or of one player]]></entry>
+					<entry key="1"><![CDATA[]]></entry>
+					<entry key="2"><![CDATA[The synonym or id of the zone]]></entry>
+					<entry key="3"><![CDATA[The name of the player]]></entry>
+				</category>
+				
+				<category key="flags.descriptions">
+					<entry key="main"><![CDATA[Lists all available flags]]></entry>
+					<entry key="1"><![CDATA[]]></entry>
+				</category>
+			</category>
+		
+			<category key="uzone">
+				<entry key="find"><![CDATA[find]]></entry>
+				<entry key="preset"><![CDATA[preset]]></entry>
+				<entry key="zone"><![CDATA[zone]]></entry>
+				<entry key="rights"><![CDATA[rights]]></entry>
+				<entry key="reload"><![CDATA[reload]]></entry>
+				<entry key="update"><![CDATA[update]]></entry>
+				
+				<category key="find.descriptions">
+					<entry key="main"><![CDATA[Provides options to find zones]]></entry>
+					<entry key="1"><![CDATA[]]></entry>
+				</category>
+				
+				<category key="preset.descriptions">
+					<entry key="main"><![CDATA[Provides methods to use presets for simple rights management]]></entry>
+					<entry key="1"><![CDATA[]]></entry>
+				</category>
+				
+				<category key="zone.descriptions">
+					<entry key="main"><![CDATA[Allows to create, edit or delete zones]]></entry>
+					<entry key="1"><![CDATA[]]></entry>
+				</category>
+				
+				<category key="rights.descriptions">
+					<entry key="main"><![CDATA[Provides methods to allow extensive rights management]]></entry>
+					<entry key="1"><![CDATA[]]></entry>
+				</category>
+				
+				<category key="reload.descriptions">
+					<entry key="main"><![CDATA[Reloads the plugin and settings]]></entry>
+					<entry key="1"><![CDATA[]]></entry>
+				</category>
+				
+				<category key="update.descriptions">
+					<entry key="main"><![CDATA[Searches for new versions of this plugin]]></entry>
+					<entry key="1"><![CDATA[]]></entry>
+				</category>
+			</category>
+		</category>
+	</phrases>
+</locale>

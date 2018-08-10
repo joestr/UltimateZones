@@ -1,0 +1,200 @@
+<?xml version="1.0"?>
+
+<locale>
+	<name>English</name>
+	<tag>en_US</tag>
+	<java>en-US</java>
+	<colors>true</colors>
+	<module>plain</module>
+	<version>1</version>
+	<override>false</override>
+	
+	<phrases>
+		<entry key="find.null"><![CDATA[§greenThere were no zones found!]]></entry>
+	
+		<category key="shared">
+			<entry key="type"><![CDATA[Type]]></entry>
+			<entry key="owner"><![CDATA[Owner]]></entry>
+			<entry key="help.commands.static.important"><![CDATA[This argument must be specified.]]></entry>
+			<entry key="help.commands.static.optional"><![CDATA[This argument is optional.]]></entry>
+			<entry key="missingrights"><![CDATA[§redInsufficient rights for the command '§gold{0}§red'!]]></entry>
+			<entry key="playernotfound"><![CDATA[§redThe player §gold{0}§red is not online or never played on this server!]]></entry>
+			<entry key="zonenotfound"><![CDATA[§redThe given zone was not found or your aren't on any zone!]]></entry>
+			<entry key="added"><![CDATA[added]]></entry>
+			<entry key="removed"><![CDATA[removed]]></entry>
+			<entry key="withdrawn"><![CDATA[withdrawn]]></entry>
+			<entry key="rightsinfo.flags"><![CDATA[Flags: ]]></entry>
+			<entry key="rightsinfo.place.a"><![CDATA[Placeable (allowed): ]]></entry>
+			<entry key="rightsinfo.place.b"><![CDATA[Placeable (forbidden): ]]></entry>
+			<entry key="rightsinfo.break.a"><![CDATA[Breakable (allowed): ]]></entry>
+			<entry key="rightsinfo.break.b"><![CDATA[Breakable (forbidden): ]]></entry>
+			<entry key="rightsinfo.allowed"><![CDATA[All blocks are allowed!]]></entry>
+			<entry key="rightsinfo.denied"><![CDATA[All blocks are forbidden!]]></entry>
+		</category>
+	
+		<category key="flags">
+			<entry key="place"><![CDATA[Allows to place blocks]]></entry>
+			<entry key="break"><![CDATA[Allows to destroy blocks (without containers)]]></entry>
+			<entry key="breakcontainer"><![CDATA[Allows to destroy container blocks]]></entry>
+			<entry key="containershow"><![CDATA[Allows to open containers to see the content]]></entry>
+			<entry key="containerget"><![CDATA[Allows to take items out of containers]]></entry>
+			<entry key="containerput"><![CDATA[Allows to put items in containers]]></entry>
+			<entry key="containeruse"><![CDATA[Allows the use of anvils]]></entry>
+			<entry key="slapanimals"><![CDATA[Allows to attack animals (not monsters)]]></entry>
+			<entry key="interactanimals"><![CDATA[Allows to shear sheeps or other interactions with animals]]></entry>
+			<entry key="tameanimals"><![CDATA[Allows to tame animals]]></entry>
+			<entry key="feedanimals"><![CDATA[Allows to feed animals to multiply animals]]></entry>
+			<entry key="interactvehicles"><![CDATA[Allows the use of boats and minecarts]]></entry>
+			<entry key="placevehicles"><![CDATA[Allows to place vehicle items]]></entry>
+			<entry key="breakvehicles"><![CDATA[Allows to break vehicles]]></entry>
+			<entry key="triggerwood"><![CDATA[Allows to trigger wooden buttons or pressure plates]]></entry>
+			<entry key="triggerstone"><![CDATA[Allows to trigger stone buttons and pressure plates]]></entry>
+			<entry key="interactredstone"><![CDATA[Allows to trigger levers and gold or iron pressure plates]]></entry>
+			<entry key="pickupitems"><![CDATA[Allows to pickup items on zones (own items always allowed)]]></entry>
+			<entry key="rotateframes"><![CDATA[Allows to rotate the content of ItemFrames]]></entry>
+			<entry key="interactbed"><![CDATA[Allows to enter beds]]></entry>
+			<entry key="interacttrapdoor"><![CDATA[Allows to open or close trap doors]]></entry>
+			<entry key="denysethome"><![CDATA[Disallows to set a home position]]></entry>
+			<entry key="interactfencegate"><![CDATA[Allows to open or close Fence Gates]]></entry>
+			<entry key="placeaswhitelist"><![CDATA[Changes the behavior of the place blacklist to an whitelist]]></entry>
+			<entry key="breakaswhitelist"><![CDATA[Changes the behavior of the break blacklist to an whitelist]]></entry>
+			<entry key="administratezones"><![CDATA[Allows to add or delete sub zones]]></entry>
+			<entry key="administraterights"><![CDATA[Allows to control the rights in zones and sub zones]]></entry>	
+		</category>
+		
+		<category key="commands">
+			<category key="preset">
+				<entry key="notfound"><![CDATA[§redThe preset with the name §gold{0}§red was not found.]]></entry>
+				<entry key="apply"><![CDATA[§gold{0}§darkgreen was granted all rights of preset §gold{1}§darkgreen.]]></entry>
+				<entry key="create.1"><![CDATA[§darkgreenThe preset §gold{0}§darkgreen was created.]]></entry>
+				<entry key="create.error.norights"><![CDATA[§gold{0}§red does not have any rights in the zone!]]></entry>
+				<entry key="create.error.presetexist"><![CDATA[§redThe preset §gold{0}§red already exists!]]></entry>
+				<entry key="delete"><![CDATA[§redThe preset §gold{0}§red was deleted!]]></entry>
+				<entry key="list.all"><![CDATA[§darkgreenThere are §gold{0}§darkgreen presets:]]></entry>
+				<entry key="list.empty"><![CDATA[§redThere are no presets!]]></entry>
+				<entry key="list.info"><![CDATA[§darkgreenThe preset §gold{0}§darkgreen has the following settings:]]></entry>
+				<entry key="list.info.description"><![CDATA[§darkgreenDescription: §gold{0}]]></entry>
+				<entry key="edit.name.error.presetexist"><![CDATA[§redThe preset §gold{0}§red already exists!]]></entry>
+				<entry key="edit.name.success"><![CDATA[§darkgreenThe preset §gold{0}§darkgreen was renamed to §gold{1}§darkgreen.]]></entry>
+				<entry key="edit.flag.notexist"><![CDATA[§redThe flag with name §gold{0}§red does not exist!]]></entry>
+				<entry key="edit.flag.set"><![CDATA[§darkgreenThe flag §gold{0}§darkgreen was added to preset §gold{1}§darkgreen!]]></entry>
+				<entry key="edit.flag.unset"><![CDATA[§darkgreenThe flag §gold{0}§darkgreen was removed from preset §gold{1}§darkgreen!]]></entry>
+				<entry key="edit.description.set"><![CDATA[§darkgreenThe description of the preset §gold{0}§darkgreen was changed to:]]></entry>
+				<entry key="edit.material.notfound"><![CDATA[§redThe material §gold{0}§red was not found!]]></entry>
+				<entry key="edit.material.unknownmethod"><![CDATA[§redPlease enter §goldplace§red or §goldbreak§red as the method!]]></entry>
+			</category>
+			
+			<category key="zone">
+				<entry key="add.forbiddenworld"><![CDATA[§redYou can't create zones in world §gold{0}§red!]]></entry>
+				<entry key="add.forbiddentype.main"><![CDATA[§redYou can't create §gold{0} mainzones§red of type §gold{1}§red!]]></entry>
+				<entry key="add.forbiddentype.child"><![CDATA[§redYou can't create §gold{0} subzones§red of type §gold{1}§red!]]></entry>
+				<entry key="add.error.maxzones"><![CDATA[§redYou can create a maximum of §gold{1}§red zones in world §gold{0}§red!]]></entry>
+				<entry key="add.error.zonetype.ultimatezones"><![CDATA[§redThe zonetype §gold{0}§red does not exist!]]></entry>
+				<entry key="add.error.zonetype.zoneslib"><![CDATA[§redThe zoneshape §gold{0}§red does not exist!]]></entry>
+				<entry key="add.priority.error"><![CDATA[§redThe given priority §gold{0}§red is not a number!]]></entry>
+				<entry key="add.priority.success"><![CDATA[§darkgreenThe priority of the new zone will be §gold{0}§darkgreen.]]></entry>
+				<entry key="add.error.started"><![CDATA[§redYou're already in the zone creation!]]></entry>
+				<entry key="info.created"><![CDATA[§darkgreenCreated: §gold{0}]]></entry>
+				<entry key="info.area_volume"><![CDATA[§darkgreenArea/Volume: §gold{0}§darkgreen/§gold{1}]]></entry>
+				<entry key="info.childs"><![CDATA[§darkgreenSubzones (not recursive): §gold{0}]]></entry>
+				<entry key="list.main"><![CDATA[§gold{0}§darkgreen has §gold{1}§darkgreen Mainzones with a total of §gold{2}§darkgreen subzones:]]></entry>		
+				<entry key="delete.missingrights"><![CDATA[§redYou need to be the owner of the zone for this action!]]></entry>		
+				<entry key="edit.name.missingrights"><![CDATA[§redYou need to be the owner to rename a zone!]]></entry>
+				<entry key="edit.name.error"><![CDATA[§redYou already have a zone with name §gold{0}§red!]]></entry>
+				<entry key="edit.name.success"><![CDATA[§darkgreenThe name of the zone §gold{0}§darkgreen of §gold{1}§darkgreen was changed to §gold{2}§darkgreen.]]></entry>				
+				<entry key="edit.priority.error.mainzone"><![CDATA[§redThe choosen zone must be an mainzone!]]></entry>
+				<entry key="edit.priority.error"><![CDATA[§redThe given priority §gold{0}§red is not a number!]]></entry>
+				<entry key="edit.owner.error.mainzone"><![CDATA[§redThe choosen zone must be an mainzone!]]></entry>
+				<entry key="edit.owner.error.player"><![CDATA[§redThe player §gold{0}§red was not found!]]></entry>
+				<entry key="edit.owner.error"><![CDATA[§redAn unknown error occurred while changing the owner of the zone!]]></entry>
+				<entry key="edit.owner.success"><![CDATA[§darkgreenThe zone owner was changed to §gold{0}§darkgreen.]]></entry>		
+				<entry key="display.success"><![CDATA[§darkgreenThe zone will be visually displayed for §gold{0}§darkgreen seconds.]]></entry>				
+				<entry key="creation.error"><![CDATA[§redThere is no zone creation running!]]></entry>
+			</category>
+			
+			<category key="find">
+				<entry key="deactivated"><![CDATA[§greenZone finding was deactivated]]></entry>
+			</category>
+			
+			<category key="rights">
+				<entry key="edit.flag.unknownflag"><![CDATA[§redDThe flag §gold{0}§red was not found!]]></entry>
+				<entry key="edit.flag.unknownplayer"><![CDATA[§redThe player §gold{0}§red was not found!]]></entry>
+				<entry key="edit.flag.flagrights"><![CDATA[§redYou do not have the rights to set the flag §gold{0}§red]]></entry>
+				<entry key="edit.block.unknownaction"><![CDATA[§redThe action §gold{0}§red was not found!]]></entry>
+				<entry key="edit.block.unknownplayer"><![CDATA[§redThe player §gold{0}§red was not found!]]></entry>
+				<entry key="edit.block.unknownmaterial"><![CDATA[§redThe material §gold{0}§red was not found!]]></entry>				
+				<entry key="copy.zone.unknownzone"><![CDATA[§redThe zone §gold{0}§red was not found!]]></entry>
+				<entry key="copy.zone.owneronly"><![CDATA[§redOnly the owner of the zone can alter all rights at once!]]></entry>
+				<entry key="copy.zone.unknownplayer"><![CDATA[§redThe player §gold{0}§red was not found!]]></entry>			
+				<entry key="copy.player.unknownplayer"><![CDATA[§redThe player §gold{0}§red was not found!]]></entry>				
+				<entry key="copy.player.success"><![CDATA[§darkgreenThe player §gold{0}§darkgreen has copied the rights of §gold{1}§darkgreen!]]></entry>				
+				<entry key="list.unknownplayer"><![CDATA[§redThe player §gold{0}§red was not found!]]></entry>	
+				<entry key="list.global.empty"><![CDATA[§redThere are no roghts given to players!]]></entry>	
+				<entry key="clear.unknownplayer"><![CDATA[§redThe player §gold{0}§red was not found!]]></entry>					
+				<entry key="flags"><![CDATA[§darkgreenThere are §gold{0}§darkgreen flags:]]></entry>					
+			</category>
+			
+			<category key="uzone">
+				<entry key="notfound"><![CDATA[§redThe command §gold{0}§red was not found!]]></entry>
+			</category>
+		</category>
+		
+		<category key="creation">
+			<category key="abstract">
+				<entry key="aborted"><![CDATA[§redZone creation was cancelled!]]></entry>
+			</category>
+			
+			<category key="normal">
+				<entry key="error.subzone.mainzone"><![CDATA[§redsubzones must be created within mainzones or other subzones!]]></entry>
+				<entry key="error.subzone.sameparent"><![CDATA[§redsubzones must be created within one parent zone!]]></entry>
+				<entry key="create.success"><![CDATA[§greenThe zone was created succesfully!]]></entry>
+				<entry key="create.failed"><![CDATA[§redAn unknown error occurred while creating the zone!]]></entry>
+			
+				<category key="positions">
+					<entry key="cuboid.right"><![CDATA[§goldRightclick (Pos. A)§darkgreen set to: §gold{0}§darkgreenx §gold{1}§darkgreeny §gold{2}§darkgreenz]]></entry>
+					<entry key="cuboid.left"><![CDATA[§goldLeftclick (Pos. B)§darkgreen set to: §gold{0}§darkgreenx §gold{1}§darkgreeny §gold{2}§darkgreenz]]></entry>
+					<entry key="cylinder.right"><![CDATA[§goldRightclick (Origin)§darkgreen set to: §gold{0}§darkgreenx §gold{1}§darkgreeny §gold{2}§darkgreenz]]></entry>
+					<entry key="cylinder.left"><![CDATA[§goldLeftclick (Radius/Height)§darkgreen set to: §gold{0}§darkgreenx §gold{1}§darkgreeny §gold{2}§darkgreenz]]></entry>
+					<entry key="sphere.right"><![CDATA[§goldRightclick (Origin)§darkgreen set to: §gold{0}§darkgreenx §gold{1}§darkgreeny §gold{2}§darkgreenz]]></entry>
+					<entry key="sphere.left"><![CDATA[§goldLeftclick (Radius)§darkgreen set to: §gold{0}§darkgreenx §gold{1}§darkgreeny §gold{2}§darkgreenz]]></entry>				
+					<entry key="polygon.right.success"><![CDATA[§goldRightclick ({0}. Position)§darkgreen set to: §gold{1}§darkgreenx §gold{2}§darkgreeny §gold{3}§darkgreenz]]></entry>
+					<entry key="polygon.left.success"><![CDATA[§goldLeftclick (Position removed)§darkgreen at: §gold{0}§darkgreenx §gold{1}§darkgreeny §gold{2}§darkgreenz]]></entry>
+					<entry key="polygon.right.failed"><![CDATA[§redThe choosen position was already added!]]></entry>
+					<entry key="polygon.left.failed"><![CDATA[§redThe choosen position wasn't added so far!]]></entry>
+				</category>
+				
+				<category key="info">
+					<entry key="cuboid"><![CDATA[§darkgreenChoose with an §goldleft -/ and rightclick§darkgreen the §goldtwo vertices§darkgreen.]]></entry>
+					<entry key="cylinder.right"><![CDATA[§darkgreenChoose with an §goldrightclick§darkgreen the §goldorigin§darkgreen.]]></entry>
+					<entry key="cylinder.left"><![CDATA[§darkgreenChoose with an §goldleftclick§darkgreen the §goldradius and height (optional)§darkgreen.]]></entry>
+					<entry key="sphere.right"><![CDATA[§darkgreenChoose with an §goldrightclick§darkgreen the §goldorigin§darkgreen.]]></entry>
+					<entry key="sphere.left"><![CDATA[§darkgreenChoose with an §goldleftclick§darkgreen the §goldradius§darkgreen.]]></entry>
+					<entry key="polygon.right"><![CDATA[§goldAdd§darkgreen with an §goldrightclick§darkgreen more §goldpositions§darkgreen.]]></entry>
+					<entry key="polygon.left"><![CDATA[§goldDelete§darkgreen with an §goldleftclick§darkgreen one §goldposition§darkgreen.]]></entry>
+
+				</category>
+				
+				<category key="info">
+					<entry key="origin"><![CDATA[§darkgreenOrigin: §gold{0}§darkgreenx §gold{1}§darkgreeny §gold{2}§darkgreenz]]></entry>
+					<entry key="area"><![CDATA[§darkgreenArea: §gold{0}]]></entry>
+					<entry key="volume"><![CDATA[§darkgreenVolume: §gold{0}]]></entry>
+				</category>
+				
+				<category key="check">
+					<entry key="heightzone.minheight"><![CDATA[§redThe zone must be at least §gold{0}§red blocks height!]]></entry>
+					<entry key="heightzone.maxheight"><![CDATA[§redDie Zone darf maxmimal §gold{0}§red Blöcke hoch sein!]]></entry>
+					<entry key="roundedzone.minradius"><![CDATA[§redDie Zone muss mindestens einen Radius von §gold{0}§red Blöcken haben!]]></entry>
+					<entry key="roundedzone.maxradius"><![CDATA[§redDie Zone darf maxmimal einen Radius von §gold{0}§red Blöcken haben!]]></entry>
+					<entry key="cuboid.minlength"><![CDATA[§redDie Zone muss auf beiden Seiten mindestens §gold{0}§red Blöcke lang sein!]]></entry>
+					<entry key="cuboid.maxlength"><![CDATA[§redDie Zone kann auf beiden Seiten nicht länger als §gold{0}§red Blöcke sein!]]></entry>
+					<entry key="cuboid.aspect"><![CDATA[§redEine Seite einer Zone darf nicht mehr als §gold{0}§red so lang wie die andere sein!]]></entry>
+					<entry key="polygon.maxdots"><![CDATA[§redDie Zone darf maxmimal §gold{0}§red Positionen besitzen!]]></entry>
+					<entry key="main.maxarea"><![CDATA[§redDie Hauptzonen dürfen im gesamten nicht mehr als eine Fläche von §gold{0}§red! beanspruchen!]]></entry>
+					<entry key="main.maxvolume"><![CDATA[§redDie Hauptzonen dürfen im gesamten nicht mehr als ein Volumen von §gold{0}§red! beanspruchen!]]></entry>
+					<entry key="child.maxchilds"><![CDATA[§redIn einer Hauptzone dürfen maximal §gold{0}§red Unterzonen vorhanden sein!]]></entry>
+					<entry key="child.maxdepth"><![CDATA[§redDie maximale Verschachtelung von Unterzonen beträgt §gold{0}§red Zonen!]]></entry>
+				</category>
+			</category>
+		</category>
+	</phrases>
+</locale>
