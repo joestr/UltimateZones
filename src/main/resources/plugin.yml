@@ -11,3 +11,5 @@ commands:
   'uzone':
     aliases: ['uz']
     usage: /<command>
+
+api: 1.13

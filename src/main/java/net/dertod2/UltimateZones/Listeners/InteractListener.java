@@ -20,7 +20,8 @@ import net.dertod2.UltimateZones.Utils.MessageUtils;
 
 public class InteractListener implements Listener {
 
-	@EventHandler(priority = EventPriority.HIGH, ignoreCancelled = true)
+	@SuppressWarnings("deprecation")
+    @EventHandler(priority = EventPriority.HIGH, ignoreCancelled = true)
 	public void onBlockLeftClick(PlayerInteractEvent event) {
 		if (event.getAction() != Action.LEFT_CLICK_BLOCK) return;
 		
@@ -46,7 +47,7 @@ public class InteractListener implements Listener {
 				rightResult = abstractZone.hasRight(event.getPlayer(), Flag.ContainerShow);
 				break;
 			case Normal:
-				if (blockMaterial == Material.TRAP_DOOR) {
+				if (blockMaterial == Material.LEGACY_TRAP_DOOR) {
 					rightResult = abstractZone.hasRight(event.getPlayer(), Flag.InteractTrapdoor);
 				} else if (InteractUtils.isFenceGate(blockMaterial)) {
 					rightResult = abstractZone.hasRight(event.getPlayer(), Flag.InteractFenceGate);
@@ -77,7 +78,8 @@ public class InteractListener implements Listener {
 		}
 	}
 	
-	@EventHandler(priority = EventPriority.HIGH, ignoreCancelled = true)
+	@SuppressWarnings("deprecation")
+    @EventHandler(priority = EventPriority.HIGH, ignoreCancelled = true)
 	public void onBlockRightClick(PlayerInteractEvent event) {
 		if (event.getAction() != Action.RIGHT_CLICK_BLOCK) return;
 		
@@ -91,7 +93,7 @@ public class InteractListener implements Listener {
 		
 		Material blockMaterial = event.getClickedBlock().getType();
 		
-		if (!InteractUtils.righClickCheck(blockMaterial, event.getPlayer().getItemInHand())) return;
+		if (!InteractUtils.righClickCheck(blockMaterial, event.getPlayer().getInventory().getItemInMainHand())) return;
 		AbstractZone abstractZone = AbstractZone.getZone(event.getClickedBlock().getLocation());
 		if (abstractZone == null) return;
 		
@@ -103,7 +105,7 @@ public class InteractListener implements Listener {
 			rightResult = abstractZone.hasRight(event.getPlayer(), Flag.ContainerShow);
 			break;
 		case Normal:
-			if (blockMaterial == Material.TRAP_DOOR) {
+			if (blockMaterial == Material.LEGACY_TRAP_DOOR) {
 				rightResult = abstractZone.hasRight(event.getPlayer(), Flag.InteractTrapdoor);
 			} else if (InteractUtils.isFenceGate(blockMaterial)) {
 				rightResult = abstractZone.hasRight(event.getPlayer(), Flag.InteractFenceGate);
@@ -132,7 +134,8 @@ public class InteractListener implements Listener {
 		}
 	}
 	
-	@EventHandler(priority = EventPriority.HIGH, ignoreCancelled = true)
+	@SuppressWarnings("deprecation")
+    @EventHandler(priority = EventPriority.HIGH, ignoreCancelled = true)
 	public void onBlockPhysical(PlayerInteractEvent event) {
 		if (event.getAction() != Action.PHYSICAL) return;
 		
@@ -142,11 +145,11 @@ public class InteractListener implements Listener {
 		RightResult rightResult = RightResult.Success;
 		
 		Material material = event.getClickedBlock().getType();
-		if (material == Material.SOIL) {
+		if (material == Material.LEGACY_SOIL) {
 			rightResult = abstractZone.hasRight(event.getPlayer(), Flag.Break, material);
-		} else if (material == Material.STONE_PLATE) {
+		} else if (material == Material.LEGACY_STONE_PLATE) {
 			rightResult = abstractZone.hasRight(event.getPlayer(), Flag.TriggerStone, material);
-		} else if (material == Material.WOOD_PLATE) {
+		} else if (material == Material.LEGACY_WOOD_PLATE) {
 			rightResult = abstractZone.hasRight(event.getPlayer(), Flag.TriggerWood, material);
 		}
 
