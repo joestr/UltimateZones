@@ -5,9 +5,9 @@ import java.util.List;
 
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
-import org.bukkit.craftbukkit.v1_13_R1.entity.CraftPlayer;
-import org.bukkit.craftbukkit.v1_13_R1.inventory.CraftItemStack;
-import org.bukkit.craftbukkit.v1_13_R1.util.CraftMagicNumbers;
+import org.bukkit.craftbukkit.v1_13_R2.entity.CraftPlayer;
+import org.bukkit.craftbukkit.v1_13_R2.inventory.CraftItemStack;
+import org.bukkit.craftbukkit.v1_13_R2.util.CraftMagicNumbers;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
@@ -19,8 +19,8 @@ import net.md_5.bungee.api.chat.ClickEvent;
 import net.md_5.bungee.api.chat.HoverEvent;
 import net.md_5.bungee.api.chat.TextComponent;
 import net.md_5.bungee.api.chat.TranslatableComponent;
-import net.minecraft.server.v1_13_R1.ChatMessageType;
-import net.minecraft.server.v1_13_R1.IChatBaseComponent;
+import net.minecraft.server.v1_13_R2.ChatMessageType;
+import net.minecraft.server.v1_13_R2.IChatBaseComponent;
 
 /**
  * Better Wrapper for ChatComponents than Canary/Bukkit/BungeeCord has<br />
@@ -35,7 +35,7 @@ public class ChatComponent {
 
     private Hover hoverComponent;
     private ChatComponent hoverValue;
-    private net.minecraft.server.v1_13_R1.NBTTagCompound hoverCompound;
+    private net.minecraft.server.v1_13_R2.NBTTagCompound hoverCompound;
 
     private Click clickComponent;
     private String clickValue;
@@ -134,17 +134,17 @@ public class ChatComponent {
     public ChatComponent text(ItemStack itemStack) {
         ItemMeta itemMeta = itemStack.getItemMeta();
 
-        net.minecraft.server.v1_13_R1.ItemStack nmsStack = CraftItemStack.asNMSCopy(itemStack);
+        net.minecraft.server.v1_13_R2.ItemStack nmsStack = CraftItemStack.asNMSCopy(itemStack);
         if (nmsStack == null) {
-            net.minecraft.server.v1_13_R1.Item item = CraftMagicNumbers.getItem(itemStack.getType());
+            net.minecraft.server.v1_13_R2.Item item = CraftMagicNumbers.getItem(itemStack.getType());
             if (item == null) {
-                net.minecraft.server.v1_13_R1.Block block = CraftMagicNumbers.getBlock(itemStack.getType());
+                net.minecraft.server.v1_13_R2.Block block = CraftMagicNumbers.getBlock(itemStack.getType());
                 if (block == null) {
                     this.text(itemStack.getType().name().toLowerCase());
                     this.translate(false);
                 } else {
                     try {
-                        this.text(net.minecraft.server.v1_13_R1.LocaleLanguage.class.newInstance()
+                        this.text(net.minecraft.server.v1_13_R2.LocaleLanguage.class.newInstance()
                                 .a(block.a() + ".name"));
                     } catch (InstantiationException | IllegalAccessException e) {
                         // TODO Auto-generated catch block
@@ -154,7 +154,7 @@ public class ChatComponent {
                 }
             } else {
                 try {
-                    this.text(net.minecraft.server.v1_13_R1.LocaleLanguage.class.newInstance()
+                    this.text(net.minecraft.server.v1_13_R2.LocaleLanguage.class.newInstance()
                             .a(item.getName() + ".name"));
                 } catch (InstantiationException | IllegalAccessException e) {
                     // TODO Auto-generated catch block
@@ -261,27 +261,27 @@ public class ChatComponent {
      * @return this ChatComponent Object
      */
     public ChatComponent hover(ItemStack itemStack) {
-        net.minecraft.server.v1_13_R1.ItemStack nmsStack = CraftItemStack.asNMSCopy(itemStack);
+        net.minecraft.server.v1_13_R2.ItemStack nmsStack = CraftItemStack.asNMSCopy(itemStack);
 
         if (nmsStack == null) {
-            net.minecraft.server.v1_13_R1.Item item = CraftMagicNumbers.getItem(itemStack.getType());
+            net.minecraft.server.v1_13_R2.Item item = CraftMagicNumbers.getItem(itemStack.getType());
             if (item == null) {
-                net.minecraft.server.v1_13_R1.Block block = CraftMagicNumbers.getBlock(itemStack.getType());
+                net.minecraft.server.v1_13_R2.Block block = CraftMagicNumbers.getBlock(itemStack.getType());
                 if (block == null) {
                     System.out.println("No NMS Stack Item for " + (itemStack.toString()));
                 } else {
                     this.hoverComponent = Hover.ShowItem;
-                    this.hoverCompound = new net.minecraft.server.v1_13_R1.ItemStack(block)
-                            .save(new net.minecraft.server.v1_13_R1.NBTTagCompound());
+                    this.hoverCompound = new net.minecraft.server.v1_13_R2.ItemStack(block)
+                            .save(new net.minecraft.server.v1_13_R2.NBTTagCompound());
                 }
             } else {
                 this.hoverComponent = Hover.ShowItem;
-                this.hoverCompound = new net.minecraft.server.v1_13_R1.ItemStack(item)
-                        .save(new net.minecraft.server.v1_13_R1.NBTTagCompound());
+                this.hoverCompound = new net.minecraft.server.v1_13_R2.ItemStack(item)
+                        .save(new net.minecraft.server.v1_13_R2.NBTTagCompound());
             }
         } else {
             this.hoverComponent = Hover.ShowItem;
-            this.hoverCompound = nmsStack.save(new net.minecraft.server.v1_13_R1.NBTTagCompound());
+            this.hoverCompound = nmsStack.save(new net.minecraft.server.v1_13_R2.NBTTagCompound());
         }
 
         return this;
@@ -701,7 +701,7 @@ public class ChatComponent {
      * @param extended
      */
     public static void sendParsed(CommandSender commandSender, String json, ChatComponent extended) {
-        IChatBaseComponent iChatBaseComponent = net.minecraft.server.v1_13_R1.IChatBaseComponent.ChatSerializer.a(json);
+        IChatBaseComponent iChatBaseComponent = net.minecraft.server.v1_13_R2.IChatBaseComponent.ChatSerializer.a(json);
         if (extended != null)
             iChatBaseComponent.addSibling(extended.server());
 
@@ -745,8 +745,8 @@ public class ChatComponent {
      * Automatically uses the first Component.
      */
     public String json() {
-        net.minecraft.server.v1_13_R1.IChatBaseComponent chatComponent = this.server();
-        return net.minecraft.server.v1_13_R1.IChatBaseComponent.ChatSerializer.a(chatComponent);
+        net.minecraft.server.v1_13_R2.IChatBaseComponent chatComponent = this.server();
+        return net.minecraft.server.v1_13_R2.IChatBaseComponent.ChatSerializer.a(chatComponent);
     }
 
     /**
@@ -755,14 +755,14 @@ public class ChatComponent {
      * 
      * @return An new Minecraft Source ChatComponent
      */
-    public net.minecraft.server.v1_13_R1.IChatBaseComponent server() {
-        net.minecraft.server.v1_13_R1.ChatBaseComponent mainComponent = new net.minecraft.server.v1_13_R1.ChatComponentText(
+    public net.minecraft.server.v1_13_R2.IChatBaseComponent server() {
+        net.minecraft.server.v1_13_R2.ChatBaseComponent mainComponent = new net.minecraft.server.v1_13_R2.ChatComponentText(
                 "");
-        net.minecraft.server.v1_13_R1.IChatBaseComponent workingComponent = null;
+        net.minecraft.server.v1_13_R2.IChatBaseComponent workingComponent = null;
 
-        net.minecraft.server.v1_13_R1.ChatBaseComponent clearComponent = new net.minecraft.server.v1_13_R1.ChatComponentText(
+        net.minecraft.server.v1_13_R2.ChatBaseComponent clearComponent = new net.minecraft.server.v1_13_R2.ChatComponentText(
                 "");
-        clearComponent.setChatModifier(new net.minecraft.server.v1_13_R1.ChatModifier().setChatModifier(null));
+        clearComponent.setChatModifier(new net.minecraft.server.v1_13_R2.ChatModifier().setChatModifier(null));
 
         // Starts with the first component
         ChatComponent chatComponent = first();
@@ -776,30 +776,30 @@ public class ChatComponent {
         return mainComponent;
     }
 
-    private net.minecraft.server.v1_13_R1.IChatBaseComponent serverComponent(ChatComponent chatComponent) {
-        net.minecraft.server.v1_13_R1.IChatBaseComponent serverComponent = null;
+    private net.minecraft.server.v1_13_R2.IChatBaseComponent serverComponent(ChatComponent chatComponent) {
+        net.minecraft.server.v1_13_R2.IChatBaseComponent serverComponent = null;
 
         if (chatComponent.mustTranslate) {
-            serverComponent = new net.minecraft.server.v1_13_R1.ChatMessage(chatComponent.text); // Translateable
+            serverComponent = new net.minecraft.server.v1_13_R2.ChatMessage(chatComponent.text); // Translateable
                                                                                                  // Message
         } else {
-            serverComponent = new net.minecraft.server.v1_13_R1.ChatComponentText(chatComponent.text); // Normal message
+            serverComponent = new net.minecraft.server.v1_13_R2.ChatComponentText(chatComponent.text); // Normal message
         }
 
-        net.minecraft.server.v1_13_R1.ChatModifier chatModifier = new net.minecraft.server.v1_13_R1.ChatModifier();
+        net.minecraft.server.v1_13_R2.ChatModifier chatModifier = new net.minecraft.server.v1_13_R2.ChatModifier();
 
         if (chatComponent.clickComponent != null) {
-            chatModifier.setChatClickable(new net.minecraft.server.v1_13_R1.ChatClickable(
+            chatModifier.setChatClickable(new net.minecraft.server.v1_13_R2.ChatClickable(
                     chatComponent.clickComponent.getNative(), chatComponent.clickValue));
         }
 
         if (chatComponent.hoverComponent != null) {
             if (chatComponent.hoverComponent == Hover.ShowItem) {
-                chatModifier.setChatHoverable(new net.minecraft.server.v1_13_R1.ChatHoverable(
+                chatModifier.setChatHoverable(new net.minecraft.server.v1_13_R2.ChatHoverable(
                         chatComponent.hoverComponent.getNative(),
-                        new net.minecraft.server.v1_13_R1.ChatComponentText(chatComponent.hoverCompound.toString())));
+                        new net.minecraft.server.v1_13_R2.ChatComponentText(chatComponent.hoverCompound.toString())));
             } else {
-                chatModifier.setChatHoverable(new net.minecraft.server.v1_13_R1.ChatHoverable(
+                chatModifier.setChatHoverable(new net.minecraft.server.v1_13_R2.ChatHoverable(
                         chatComponent.hoverComponent.getNative(), chatComponent.hoverValue.server()));
             }
         }
@@ -809,7 +809,7 @@ public class ChatComponent {
                 if (chatColor.isColor()) {
                     if (ChatColor.RESET == chatColor)
                         continue;
-                    chatModifier.setColor(net.minecraft.server.v1_13_R1.EnumChatFormat.c(chatColor.name()));
+                    chatModifier.setColor(net.minecraft.server.v1_13_R2.EnumChatFormat.c(chatColor.name()));
                 } else {
                     switch (chatColor) {
                     case BOLD:
@@ -942,8 +942,8 @@ public class ChatComponent {
             return this.action;
         }
 
-        public net.minecraft.server.v1_13_R1.ChatClickable.EnumClickAction getNative() {
-            return net.minecraft.server.v1_13_R1.ChatClickable.EnumClickAction.a(this.code);
+        public net.minecraft.server.v1_13_R2.ChatClickable.EnumClickAction getNative() {
+            return net.minecraft.server.v1_13_R2.ChatClickable.EnumClickAction.a(this.code);
         }
     }
 
@@ -971,8 +971,8 @@ public class ChatComponent {
             return this.action;
         }
 
-        public net.minecraft.server.v1_13_R1.ChatHoverable.EnumHoverAction getNative() {
-            return net.minecraft.server.v1_13_R1.ChatHoverable.EnumHoverAction.a(this.code);
+        public net.minecraft.server.v1_13_R2.ChatHoverable.EnumHoverAction getNative() {
+            return net.minecraft.server.v1_13_R2.ChatHoverable.EnumHoverAction.a(this.code);
         }
     }
 }

@@ -20,9 +20,9 @@ import org.bukkit.command.CommandMap;
 import org.bukkit.command.PluginCommand;
 import org.bukkit.command.SimpleCommandMap;
 import org.bukkit.craftbukkit.libs.jline.internal.InputStreamReader;
-import org.bukkit.craftbukkit.v1_13_R1.CraftServer;
-import org.bukkit.craftbukkit.v1_13_R1.inventory.CraftItemStack;
-import org.bukkit.craftbukkit.v1_13_R1.util.CraftMagicNumbers;
+import org.bukkit.craftbukkit.v1_13_R2.CraftServer;
+import org.bukkit.craftbukkit.v1_13_R2.inventory.CraftItemStack;
+import org.bukkit.craftbukkit.v1_13_R2.util.CraftMagicNumbers;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.Plugin;
 
@@ -33,23 +33,23 @@ import com.google.gson.JsonParser;
 import com.mojang.authlib.GameProfile;
 
 import net.dertod2.UltimateZones.Binary.UltimateZones;
-import net.minecraft.server.v1_13_R1.Block;
-import net.minecraft.server.v1_13_R1.Item;
-import net.minecraft.server.v1_13_R1.MinecraftKey;
+import net.minecraft.server.v1_13_R2.Block;
+import net.minecraft.server.v1_13_R2.Item;
+import net.minecraft.server.v1_13_R2.MinecraftKey;
 
 public class NMSHelper {
 
     public static String getMojangTranslatableName(ItemStack itemStack) {
         String foundType = null;
 
-        net.minecraft.server.v1_13_R1.ItemStack nmsStack = CraftItemStack.asNMSCopy(itemStack);
+        net.minecraft.server.v1_13_R2.ItemStack nmsStack = CraftItemStack.asNMSCopy(itemStack);
         if (nmsStack == null) {
-            net.minecraft.server.v1_13_R1.Item item = CraftMagicNumbers.getItem(itemStack.getType());
+            net.minecraft.server.v1_13_R2.Item item = CraftMagicNumbers.getItem(itemStack.getType());
             if (item == null) {
-                net.minecraft.server.v1_13_R1.Block block = CraftMagicNumbers.getBlock(itemStack.getType());
+                net.minecraft.server.v1_13_R2.Block block = CraftMagicNumbers.getBlock(itemStack.getType());
                 if (block != null) {
                     try {
-                        foundType = net.minecraft.server.v1_13_R1.LocaleLanguage.class.newInstance().a(block.a() + ".name");
+                        foundType = net.minecraft.server.v1_13_R2.LocaleLanguage.class.newInstance().a(block.a() + ".name");
                     } catch (InstantiationException | IllegalAccessException e) {
                         // TODO Auto-generated catch block
                         e.printStackTrace();
@@ -57,7 +57,7 @@ public class NMSHelper {
                 }
             } else {
                 try {
-                    foundType = net.minecraft.server.v1_13_R1.LocaleLanguage.class.newInstance().a(item.getName() + ".name");
+                    foundType = net.minecraft.server.v1_13_R2.LocaleLanguage.class.newInstance().a(item.getName() + ".name");
                 } catch (InstantiationException | IllegalAccessException e) {
                     // TODO Auto-generated catch block
                     e.printStackTrace();
@@ -73,19 +73,19 @@ public class NMSHelper {
     public static String getMojangIdentifierName(ItemStack itemStack) {
         String foundType = null;
 
-        net.minecraft.server.v1_13_R1.ItemStack nmsStack = CraftItemStack.asNMSCopy(itemStack);
+        net.minecraft.server.v1_13_R2.ItemStack nmsStack = CraftItemStack.asNMSCopy(itemStack);
         if (nmsStack == null) {
-            net.minecraft.server.v1_13_R1.Item item = CraftMagicNumbers.getItem(itemStack.getType());
+            net.minecraft.server.v1_13_R2.Item item = CraftMagicNumbers.getItem(itemStack.getType());
             if (item == null) {
-                net.minecraft.server.v1_13_R1.Block block = CraftMagicNumbers.getBlock(itemStack.getType());
+                net.minecraft.server.v1_13_R2.Block block = CraftMagicNumbers.getBlock(itemStack.getType());
                 if (block != null) {
-                    foundType = Block.REGISTRY.b(block).toString();
+                    foundType = String.valueOf(Block.REGISTRY_ID.getId(block.getBlockData()));
                 }
             } else {
-                foundType = Item.REGISTRY.b(item).toString();
+                foundType = String.valueOf(Item.getId(item));
             }
         } else {
-            foundType = Item.REGISTRY.b(nmsStack.getItem()).toString();
+            foundType = String.valueOf(Item.getId(nmsStack.getItem()));
         }
 
         return foundType;
@@ -98,7 +98,8 @@ public class NMSHelper {
      * @return Material
      */
     public static Material lookupMojangItem(String itemName) {
-        return CraftMagicNumbers.getMaterial(Item.REGISTRY.get(new MinecraftKey(itemName)));
+        //return CraftMagicNumbers.getMaterial(Item.REGISTRY.get(new MinecraftKey(itemName)));
+        return Material.getMaterial(itemName);
     }
 
     /**
@@ -108,7 +109,8 @@ public class NMSHelper {
      * @return Material
      */
     public static Material lookupMojangBlock(String itemName) {
-        return CraftMagicNumbers.getMaterial(Block.REGISTRY.get(new MinecraftKey(itemName)));
+        //return CraftMagicNumbers.getMaterial(Block.REGISTRY.get(new MinecraftKey(itemName)));
+        return Material.getMaterial(itemName);
     }
 
     public static boolean registerCommand(String command, Plugin plugin, CommandExecutor commandExecutor,
