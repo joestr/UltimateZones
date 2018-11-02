@@ -99,7 +99,7 @@ public class NMSHelper {
      */
     public static Material lookupMojangItem(String itemName) {
         //return CraftMagicNumbers.getMaterial(Item.REGISTRY.get(new MinecraftKey(itemName)));
-        return Material.getMaterial(itemName);
+        return Material.matchMaterial(itemName);
     }
 
     /**
@@ -110,7 +110,7 @@ public class NMSHelper {
      */
     public static Material lookupMojangBlock(String itemName) {
         //return CraftMagicNumbers.getMaterial(Block.REGISTRY.get(new MinecraftKey(itemName)));
-        return Material.getMaterial(itemName);
+        return Material.matchMaterial(itemName);
     }
 
     public static boolean registerCommand(String command, Plugin plugin, CommandExecutor commandExecutor,
