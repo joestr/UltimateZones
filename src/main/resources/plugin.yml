@@ -12,4 +12,4 @@ commands:
     aliases: ['uz']
     usage: /<command>
 
-api: 1.13
+api-version: 1.13
