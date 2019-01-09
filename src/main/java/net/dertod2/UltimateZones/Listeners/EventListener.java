@@ -48,8 +48,8 @@ public class EventListener implements Listener {
 			if (!inventoryAction.equals(InventoryAction.MOVE_TO_OTHER_INVENTORY) && !clickType.equals(ClickType.DOUBLE_CLICK)) return;
 		}
 
-		boolean moveToPlayer = ((!inventoryType.equals(InventoryType.PLAYER) && event.getCurrentItem().getTypeId() != 0) || (inventoryType.equals(InventoryType.PLAYER) && clickType.equals(ClickType.DOUBLE_CLICK)  && event.getCursor().getTypeId() != 0));
-		boolean moveToContainer = (event.getCursor().getTypeId() != 0 && !clickType.equals(ClickType.DOUBLE_CLICK)) || (inventoryType.equals(InventoryType.PLAYER) && clickType.isShiftClick() && event.getCurrentItem().getTypeId() != 0);
+		boolean moveToPlayer = ((!inventoryType.equals(InventoryType.PLAYER) && event.getCurrentItem().getType().getId() != 0) || (inventoryType.equals(InventoryType.PLAYER) && clickType.equals(ClickType.DOUBLE_CLICK)  && event.getCursor().getType().getId() != 0));
+		boolean moveToContainer = (event.getCursor().getType().getId() != 0 && !clickType.equals(ClickType.DOUBLE_CLICK)) || (inventoryType.equals(InventoryType.PLAYER) && clickType.isShiftClick() && event.getCurrentItem().getType().getId() != 0);
 
 		ItemStack toPlayerStack = moveToPlayer ? (!clickType.equals(ClickType.DOUBLE_CLICK) ? event.getCurrentItem().clone() : getDoubleClickStack(event.getView().getTopInventory(), event.getCursor())) : null;
 		ItemStack toContainerStack = moveToContainer ? (isPlaceItem(inventoryAction) ? event.getCursor().clone() : event.getCurrentItem().clone()) : null;
