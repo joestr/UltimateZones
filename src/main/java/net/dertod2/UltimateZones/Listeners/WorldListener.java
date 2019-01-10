@@ -9,8 +9,8 @@ import net.dertod2.UltimateZones.Binary.UltimateZones;
 
 public class WorldListener implements Listener {
 
-	@EventHandler(priority = EventPriority.MONITOR, ignoreCancelled = true)
-	public void onWorldLoad(WorldLoadEvent event) {
-		UltimateZones.worldConfigControl.loadWorld(event.getWorld());
-	}
+    @EventHandler(priority = EventPriority.MONITOR, ignoreCancelled = true)
+    public void onWorldLoad(WorldLoadEvent event) {
+        UltimateZones.worldConfigControl.loadWorld(event.getWorld());
+    }
 }

@@ -17,30 +17,32 @@ import net.dertod2.UltimateZones.Classes.Locale;
 import net.dertod2.UltimateZones.Utils.NMSHelper;
 
 public class FindCommand implements TabExecutor {
-	public static List<UUID> findList = new ArrayList<UUID>();
-	
-	public boolean onCommand(CommandSender sender, Command command, String alias, String[] args) {
-		if (!sender.hasPermission("ultimatezones.commands.find") || !(sender instanceof Player)) {
-			Locale.sendPlain(sender, "shared.missingrights", alias);
-		} else {
-			UUID uuid = ((Player) sender).getUniqueId();
-			
-			if (FindCommand.findList.remove(uuid)) {
-				Locale.sendPlain(sender, "commands.find.deactivated");
-			} else {
-				FindCommand.findList.add(uuid);
-				if (UltimateZones.findItem != null && UltimateZones.findItem.getType() != Material.AIR) {
-					Locale.json(sender, "commands.find.activated.withitem", NMSHelper.getMojangIdentifierName(UltimateZones.findItem), NMSHelper.getMojangTranslatableName(UltimateZones.findItem));
-				} else {
-					Locale.json(sender, "commands.find.activated.withoutitem");
-				}
-			}
-		}
-		
-		return true;
-	}
+    public static List<UUID> findList = new ArrayList<UUID>();
 
-	public List<String> onTabComplete(CommandSender sender, Command command, String alias, String[] args) {
-		return ImmutableList.of();
-	}
+    public boolean onCommand(CommandSender sender, Command command, String alias, String[] args) {
+        if (!sender.hasPermission("ultimatezones.commands.find") || !(sender instanceof Player)) {
+            Locale.sendPlain(sender, "shared.missingrights", alias);
+        } else {
+            UUID uuid = ((Player) sender).getUniqueId();
+
+            if (FindCommand.findList.remove(uuid)) {
+                Locale.sendPlain(sender, "commands.find.deactivated");
+            } else {
+                FindCommand.findList.add(uuid);
+                if (UltimateZones.findItem != null && UltimateZones.findItem.getType() != Material.AIR) {
+                    Locale.json(sender, "commands.find.activated.withitem",
+                            NMSHelper.getMojangIdentifierName(UltimateZones.findItem),
+                            NMSHelper.getMojangTranslatableName(UltimateZones.findItem));
+                } else {
+                    Locale.json(sender, "commands.find.activated.withoutitem");
+                }
+            }
+        }
+
+        return true;
+    }
+
+    public List<String> onTabComplete(CommandSender sender, Command command, String alias, String[] args) {
+        return ImmutableList.of();
+    }
 }

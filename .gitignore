@@ -1,4 +1,10 @@
-.git/
+# Eclipse
+.classpath
+.project
 .settings/
-bin/
+
+# Visual Studio Code
+.vscode/
+
+# Maven
 target/
